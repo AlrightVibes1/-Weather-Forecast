@@ -1,0 +1,27 @@
+<resources>
+    <string name="home_title">Города</string>
+    <string name="open_settings">Открыть настройки</string>
+    <string name="home_empty_message">Избранных городов пока нет</string>
+    <string name="home_empty_hint">Найдите и добавьте первый город</string>
+    <string name="home_weather_not_loaded">Погода ещё не загружена</string>
+    <string name="home_last_updated">Обновлено: %1$s</string>
+    <string name="home_stale_data">Данные устарели</string>
+    <string name="home_search_label">Поиск города</string>
+    <string name="home_search_placeholder">Введите название</string>
+    <string name="home_search_clear">Очистить поиск</string>
+    <string name="home_search_loading">Ищем города…</string>
+    <string name="home_search_results_title">Результаты поиска</string>
+    <string name="home_search_empty">Ничего не найдено</string>
+    <string name="home_search_failed">Не удалось найти города. Проверьте подключение к интернету.</string>
+    <string name="home_city_add">Добавить</string>
+    <string name="home_city_open_forecast">Открыть прогноз</string>
+    <string name="home_city_adding">Добавляем…</string>
+    <string name="home_add_failed">Не удалось добавить город</string>
+    <string name="home_weather_refresh_failed">Город добавлен, но погоду пока не удалось обновить</string>
+    <string name="home_refreshing_weather">Обновляем погоду…</string>
+    <string name="home_stale_refresh_failed">Не удалось обновить погоду. Сохранённые данные остаются доступны</string>
+    <string name="home_favorites_title">Избранные города</string>
+    <string name="home_current_location_title">Текущее местоположение</string>
+    <string name="home_current_location_unknown">Название города пока не определено</string>
+    <string name="home_current_location_hint">Открыть погоду рядом со мной</string>
+</resources>

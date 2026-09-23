@@ -1,0 +1,31 @@
+{
+  "timezone": "Europe/Moscow",
+  "current": {
+    "time": "2026-09-01T12:00",
+    "temperature_2m": 18.4,
+    "apparent_temperature": 17.9,
+    "relative_humidity_2m": 63,
+    "surface_pressure": 1007.2,
+    "wind_speed_10m": 11.5,
+    "weather_code": 2,
+    "is_day": 1
+  },
+  "hourly": {
+    "time": ["2026-09-01T12:00", "2026-09-01T13:00"],
+    "temperature_2m": [18.4, 19.1],
+    "apparent_temperature": [17.9, 18.5],
+    "relative_humidity_2m": [63, 60],
+    "precipitation_probability": [15, 20],
+    "weather_code": [2, 61],
+    "wind_speed_10m": [11.5, 12.1]
+  },
+  "daily": {
+    "time": ["2026-09-01", "2026-09-02"],
+    "temperature_2m_max": [20.2, 17.6],
+    "temperature_2m_min": [10.1, 8.7],
+    "weather_code": [2, 61],
+    "precipitation_probability_max": [20, 70],
+    "sunrise": ["2026-09-01T05:31", "2026-09-02T05:33"],
+    "sunset": ["2026-09-01T19:20", "2026-09-02T19:17"]
+  }
+}

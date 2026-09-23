@@ -1,0 +1,65 @@
+<resources>
+    <string name="forecast_title">Прогноз</string>
+    <string name="forecast_open_cities">Выбрать город</string>
+    <string name="forecast_open_settings">Открыть настройки</string>
+    <string name="forecast_start_loading">Загружаем сохранённые города…</string>
+    <string name="forecast_start_empty">Пока нет города для прогноза</string>
+    <string name="forecast_start_hint">Найдите город, чтобы увидеть его погоду.</string>
+    <string name="forecast_current_location">Моё местоположение</string>
+    <string name="forecast_location_unavailable">Не удалось определить местоположение. Проверьте, включена ли геолокация, или выберите город вручную.</string>
+    <string name="forecast_permission_title">Погода для вашего местоположения</string>
+    <string name="forecast_permission_hint">Разрешите приблизительное местоположение, чтобы увидеть погоду рядом с вами. Город не будет добавлен в избранное.</string>
+    <string name="forecast_allow_location">Разрешить местоположение</string>
+    <string name="forecast_choose_city_manually">Выбрать город вручную</string>
+    <string name="forecast_tab_now">Сейчас</string>
+    <string name="forecast_tab_week">7 дней</string>
+    <string name="forecast_tab_month">Месяц</string>
+    <string name="forecast_loading">Загружаем прогноз…</string>
+    <string name="forecast_refreshing">Обновляем прогноз…</string>
+    <string name="forecast_load_failed">Не удалось загрузить прогноз. Проверьте подключение к интернету.</string>
+    <string name="forecast_cached_error">Не удалось обновить прогноз. Показаны сохранённые данные.</string>
+    <string name="forecast_city_not_found">Город больше не найден</string>
+    <string name="forecast_city_not_found_hint">Откройте список городов и выберите сохранённый город.</string>
+    <string name="forecast_feels_like">Ощущается как</string>
+    <string name="forecast_humidity">Влажность</string>
+    <string name="forecast_humidity_value">%1$d %%</string>
+    <string name="forecast_pressure">Давление</string>
+    <string name="forecast_pressure_value">%1$s гПа</string>
+    <string name="forecast_wind">Ветер</string>
+    <string name="forecast_wind_value">%1$s км/ч</string>
+    <string name="forecast_hourly_title">Ближайшие часы</string>
+    <string name="forecast_hourly_empty">Почасовые данные пока недоступны</string>
+    <string name="forecast_temperature_chart_title">Температура по часам</string>
+    <string name="forecast_precipitation_chart_title">Вероятность осадков</string>
+    <string name="forecast_hourly_chart_period">Ближайшие %1$d ч</string>
+    <string name="forecast_temperature_chart_point">%1$s: %2$s</string>
+    <string name="forecast_precipitation_chart_point">%1$s: %2$d %%</string>
+    <string name="forecast_temperature_chart_accessibility">Температура по часам. %1$s</string>
+    <string name="forecast_precipitation_chart_accessibility">Вероятность осадков. %1$s</string>
+    <string name="forecast_daily_empty">Дневные данные пока недоступны</string>
+    <string name="forecast_daily_minimum">Мин.</string>
+    <string name="forecast_daily_maximum">Макс.</string>
+    <string name="forecast_daily_precipitation">Осадки</string>
+    <string name="forecast_today">Сегодня</string>
+    <string name="forecast_precipitation_value">%1$d %%</string>
+    <string name="forecast_day_temperature_range">%1$s … %2$s</string>
+    <string name="forecast_sunrise">Восход</string>
+    <string name="forecast_sunset">Закат</string>
+    <string name="forecast_value_unavailable">—</string>
+    <string name="forecast_day_real_data_notice">Показаны только доступные данные прогноза для этого дня.</string>
+    <string name="forecast_month_availability">Доступно до 16 дней</string>
+    <string name="forecast_month_accuracy_warning">Точность дальнего прогноза снижается.</string>
+    <string name="forecast_month_empty">Расширенный прогноз пока недоступен</string>
+    <string name="forecast_calendar_day_available">%1$d число. Минимум %2$s, максимум %3$s. Открыть прогноз.</string>
+    <string name="forecast_calendar_day_unavailable">%1$d число. Прогноз недоступен.</string>
+    <string name="forecast_calendar_temperature_range">%1$d…%2$d%3$s</string>
+    <string-array name="forecast_weekday_short_labels">
+        <item>пн</item>
+        <item>вт</item>
+        <item>ср</item>
+        <item>чт</item>
+        <item>пт</item>
+        <item>сб</item>
+        <item>вс</item>
+    </string-array>
+</resources>

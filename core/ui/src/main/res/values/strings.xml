@@ -1,0 +1,14 @@
+<resources>
+    <string name="temperature_value">%1$d%2$s</string>
+    <string name="navigate_back">Назад</string>
+    <string name="retry">Повторить</string>
+    <string name="weather_clear">Ясно</string>
+    <string name="weather_partly_cloudy">Переменная облачность</string>
+    <string name="weather_cloudy">Облачно</string>
+    <string name="weather_fog">Туман</string>
+    <string name="weather_drizzle">Морось</string>
+    <string name="weather_rain">Дождь</string>
+    <string name="weather_snow">Снег</string>
+    <string name="weather_thunderstorm">Гроза</string>
+    <string name="weather_unknown">Неизвестно</string>
+</resources>

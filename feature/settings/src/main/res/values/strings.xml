@@ -1,0 +1,23 @@
+<resources>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_temperature_title">Единицы температуры</string>
+    <string name="settings_temperature_celsius">Цельсий (°C)</string>
+    <string name="settings_temperature_fahrenheit">Фаренгейт (°F)</string>
+    <string name="settings_theme_title">Тема оформления</string>
+    <string name="settings_theme_light">Светлая</string>
+    <string name="settings_theme_dark">Тёмная</string>
+    <string name="settings_location_title">Местоположение</string>
+    <string name="settings_automatic_location_weather">Автоматическое получение погоды из локации</string>
+    <string name="settings_location_permission_hint">При включении приложение попросит разрешение на приблизительное местоположение. Можно продолжить выбирать город вручную.</string>
+    <string name="settings_data_title">Локальные данные</string>
+    <string name="settings_clear_description">Удаляет все сохранённые города и связанные с ними прогнозы.</string>
+    <string name="settings_clear_favorites">Очистить избранное</string>
+    <string name="settings_nothing_to_clear">Избранное уже пусто</string>
+    <string name="settings_clearing">Удаляем сохранённые города…</string>
+    <string name="settings_save_failed">Не удалось сохранить настройку. Попробуйте ещё раз.</string>
+    <string name="settings_clear_failed">Не удалось очистить избранное. Данные не были удалены.</string>
+    <string name="settings_clear_dialog_title">Очистить избранное?</string>
+    <string name="settings_clear_dialog_message">Все сохранённые города и прогнозы будут удалены. Это действие нельзя отменить.</string>
+    <string name="settings_clear_confirm">Очистить</string>
+    <string name="settings_clear_cancel">Отмена</string>
+</resources>

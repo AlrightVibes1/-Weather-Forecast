@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "id": 524901,
+      "name": "Москва",
+      "latitude": 55.75222,
+      "longitude": 37.61556,
+      "country": "Россия",
+      "admin1": "Москва",
+      "timezone": "Europe/Moscow"
+    },
+    {
+      "id": 3413829,
+      "name": "Рейкьявик",
+      "latitude": 64.13548,
+      "longitude": -21.89541,
+      "timezone": "Atlantic/Reykjavik"
+    },
+    {
+      "id": 999001,
+      "name": "Без часового пояса",
+      "latitude": 10.0,
+      "longitude": 20.0,
+      "country": "Тест"
+    },
+    null,
+    {
+      "id": 999002,
+      "name": "Без координаты",
+      "longitude": 20.0,
+      "timezone": "UTC"
+    }
+  ]
+}
