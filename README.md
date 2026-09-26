@@ -121,4 +121,5 @@ $env:ANDROID_USER_HOME = (Resolve-Path .\.android-user).Path
 - [RALPH_PROGRESS.md](RALPH_PROGRESS.md) — подробный журнал проверок и ограничений среды.
 - [ARCHITECTURE.md](ARCHITECTURE.md) — устройство слоёв и потоков данных.
 #   - W e a t h e r - F o r e c a s t  
+ #   - W e a t h e r - F o r e c a s t  
  
