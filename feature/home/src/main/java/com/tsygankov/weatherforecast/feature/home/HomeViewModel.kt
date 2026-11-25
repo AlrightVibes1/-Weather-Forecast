@@ -112,6 +112,8 @@ class HomeViewModel(
     private var staleRefreshJob: Job? = null
     private var searchGeneration = 0L
 
+    // combine пересчитывает состояние при изменении любого из источников.
+    // stateIn хранит последнее значение в viewModelScope и управляет сбором по подписчикам.
     val uiState: StateFlow<HomeUiState> = combine(
         favoritesRepository.observeCities(),
         settingsRepository.settings,
@@ -140,6 +142,8 @@ class HomeViewModel(
         initialValue = HomeUiState(),
     )
 
+    // Channel передаёт одноразовые события. Новый подписчик не получает событие,
+    // уже обработанное предыдущим, как получил бы последнее значение StateFlow.
     val effects: Flow<HomeEffect> = effectsChannel.receiveAsFlow()
 
     fun updateQuery(value: String) {
@@ -255,6 +259,8 @@ class HomeViewModel(
         generation: Long,
         delayMillis: Long,
     ): Job = viewModelScope.launch {
+        // delay приостанавливает корутину без блокировки потока. Повторный ввод может
+        // отменить эту Job до запроса. Проверка поколения отсекает запоздалый ответ.
         if (delayMillis > 0L) delay(delayMillis)
         if (!isCurrentSearch(query, generation)) return@launch
 
@@ -304,6 +310,8 @@ class HomeViewModel(
 
     private fun invalidateSearch(): Long {
         searchGeneration += 1
+        // Отмена Job прекращает ожидание предыдущего поиска. Номер поколения выше
+        // помечает предыдущий результат устаревшим даже при запоздалом завершении.
         searchJob?.cancel()
         searchJob = null
         return searchGeneration

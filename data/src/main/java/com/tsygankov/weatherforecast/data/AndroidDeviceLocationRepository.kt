@@ -153,6 +153,8 @@ private suspend fun LocationManager.awaitCurrentLocation(
     providers: List<String>,
     executor: Executor,
 ): Location? = suspendCancellableCoroutine { continuation ->
+    // Преобразуем callback API геолокации в suspend-вызов. При отмене корутины
+    // invokeOnCancellation отменяет запросы к системным провайдерам.
     val cancellations = mutableListOf<CancellationSignal>()
     val lock = Any()
     var pendingProviders = providers.size
