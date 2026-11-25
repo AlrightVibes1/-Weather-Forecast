@@ -138,6 +138,8 @@ fun ForecastRoute(
     ),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    // Индекс вкладки и дата выбранного дня сохраняются через SavedStateRegistry
+    // и восстанавливаются, например, после поворота экрана.
     var selectedTabIndex by rememberSaveable { mutableIntStateOf(ForecastTab.NOW.ordinal) }
     var selectedDaySourceDate by rememberSaveable { mutableStateOf<String?>(null) }
     val selectedTab = remember(selectedTabIndex) {
