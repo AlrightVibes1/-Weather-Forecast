@@ -13,6 +13,7 @@ internal fun WeatherForecastAppRoute(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit,
 ) {
+    // Корневой Composable читает настройки и передаёт выбранную тему всему графу навигации.
     val settings by viewModel.settings.collectAsStateWithLifecycle()
 
     WeatherForecastApp(

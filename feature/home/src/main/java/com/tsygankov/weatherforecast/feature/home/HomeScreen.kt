@@ -82,7 +82,10 @@ fun HomeRoute(
     onBackClick: (() -> Unit)? = null,
     viewModel: HomeViewModel = koinViewModel(),
 ) {
+    // Адаптируем StateFlow к состоянию Compose. Сбор приостанавливается ниже STARTED,
+    // а при новом значении Compose обновляет компоненты, которые читают это состояние.
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    // remember сохраняет один SnackbarHostState на время жизни этого вызова в композиции.
     val snackbarHostState = remember { SnackbarHostState() }
     val searchFailedMessage = stringResource(R.string.home_search_failed)
     val addFailedMessage = stringResource(R.string.home_add_failed)
@@ -93,6 +96,8 @@ fun HomeRoute(
         viewModel.onResume()
     }
 
+    // Эффект собирает события для Snackbar. Compose отменяет его при выходе из композиции
+    // и перезапускает при изменении ключей, включая локализованные тексты сообщений.
     LaunchedEffect(
         viewModel,
         snackbarHostState,
@@ -141,6 +146,8 @@ fun HomeRoute(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+// Экран получает готовое состояние и сообщает о действиях через callbacks.
+// Поэтому проверка интерфейса может передавать состояния напрямую, без ViewModel и сети.
 fun HomeScreen(
     state: HomeUiState,
     onQueryChange: (String) -> Unit,
@@ -200,6 +207,7 @@ fun HomeScreen(
         },
         snackbarHost = snackbarHost,
     ) { contentPadding ->
+        // LazyColumn компонует строки по мере необходимости для прокрутки.
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
@@ -285,6 +293,7 @@ fun HomeScreen(
                 }
                 items(
                     items = state.cityItems,
+                    // Стабильный ID связывает строку с городом при изменении порядка или состава списка.
                     key = { city -> "favorite_${city.id}" },
                 ) { city ->
                     FavoriteCityCard(
