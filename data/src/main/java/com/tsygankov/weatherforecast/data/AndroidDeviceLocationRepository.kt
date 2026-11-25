@@ -43,6 +43,8 @@ class AndroidDeviceLocationRepository internal constructor(
         ) {
             Result.failure(LocationUnavailableException())
         } else {
+            // LocationManager — системный сервис Android. Получаем его через Context
+            // после проверки разрешения на приблизительное местоположение.
             val locationManager = context.getSystemService(Context.LOCATION_SERVICE)
                 as? LocationManager
             val providers = locationManager?.availableProviders().orEmpty()

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="android_components_demo_container" type="id" />
+    <item name="android_components_demo_list" type="id" />
+    <string name="android_components_demo_title">Погода · Пример Android</string>
+    <string-array name="android_components_demo_topics">
+        <item>Context — доступ к ресурсам и системным сервисам</item>
+        <item>Activity — окно и жизненный цикл экрана</item>
+        <item>Fragment — часть экрана со своим жизненным циклом</item>
+        <item>RecyclerView — повторное использование строк списка</item>
+        <item>WorkManager — отложенное обновление прогноза</item>
+    </string-array>
+</resources>
