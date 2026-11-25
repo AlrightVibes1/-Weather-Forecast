@@ -11,6 +11,8 @@ class WeatherForecastApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
+            // Koin получает контекст Application, который живёт столько же, сколько процесс.
+            // Синглтоны используют его для обращения к Android API без ссылки на экземпляр Activity.
             androidContext(this@WeatherForecastApplication)
             workManagerFactory()
             modules(appModules)

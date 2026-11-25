@@ -16,6 +16,8 @@
         android:roundIcon="@mipmap/ic_weather_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeatherForecast">
+        <!-- WorkManager добавляет SystemJobService через объединение манифестов.
+             Android JobScheduler через этот Service передаёт запуск готовых задач WorkManager. -->
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"
@@ -32,6 +34,7 @@
             android:exported="true"
             android:theme="@style/Theme.WeatherForecast"
             android:windowSoftInputMode="adjustResize">
+            <!-- MAIN и LAUNCHER обозначают точку входа для запуска с домашнего экрана. -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

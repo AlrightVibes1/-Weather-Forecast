@@ -46,6 +46,8 @@ object WeatherRefreshScheduler {
 
     fun schedule(context: Context): Operation = schedule(WorkManager.getInstance(context))
 
+    // WorkManager хранит расписание между перезапусками процесса и ждёт доступную сеть.
+    // Политика KEEP сохраняет одну периодическую задачу при повторных запусках приложения.
     internal fun schedule(workManager: WorkManager): Operation =
         workManager.enqueueUniquePeriodicWork(
             UNIQUE_NAME,
