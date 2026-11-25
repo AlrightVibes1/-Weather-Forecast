@@ -11,6 +11,8 @@ import java.util.TimeZone
 class WeatherDateTimeFormatter private constructor(
     private val timezone: TimeZone,
 ) {
+    // SimpleDateFormat и TimeZone приходят из Java API. Kotlin-функция apply
+    // настраивает строгий разбор и часовой пояс города, затем возвращает форматтер.
     private val hourInput = SimpleDateFormat(FORECAST_API_HOUR_PATTERN, Locale.ROOT).apply {
         isLenient = false
         timeZone = timezone
@@ -82,6 +84,8 @@ fun Double.formatRussianDecimal(): String = DecimalFormat(
 
 private fun SimpleDateFormat.parseFully(value: String): Long? {
     val position = ParsePosition(0)
+    // Java-метод parse может вернуть null. Оператор ?: явно завершает разбор
+    // в этом случае, а проверка индекса ниже отсеивает строки с лишним суффиксом.
     val parsed = parse(value, position) ?: return null
     return parsed.time.takeIf { position.index == value.length }
 }

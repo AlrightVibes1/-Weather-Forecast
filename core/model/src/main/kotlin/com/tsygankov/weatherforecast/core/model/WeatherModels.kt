@@ -3,6 +3,8 @@ package com.tsygankov.weatherforecast.core.model
 import kotlin.math.ceil
 import kotlin.math.floor
 
+// data class даёт модели равенство по значениям полей конструктора и copy
+// для создания нового города с изменёнными полями.
 data class City(
     val id: Long,
     val name: String,
@@ -68,6 +70,8 @@ enum class WeatherCondition {
     CLEAR, PARTLY_CLOUDY, CLOUDY, FOG, DRIZZLE, RAIN, SNOW, THUNDERSTORM, UNKNOWN;
 
     companion object {
+        // Int? допускает отсутствующий код, а when группирует коды по погодным состояниям.
+        // Ветка else покрывает null и новые значения, которые API может прислать позднее.
         fun fromWmo(code: Int?): WeatherCondition = when (code) {
             0, 1 -> CLEAR
             2 -> PARTLY_CLOUDY
@@ -104,6 +108,8 @@ data class UserSettings(
     val automaticLocationWeather: Boolean = true,
 )
 
+// Функция-расширение даёт запись temperature.inUnit(unit) и держит правила
+// перевода температуры рядом с моделью TemperatureUnit.
 fun Double.inUnit(unit: TemperatureUnit): Double =
     unit.convertFromCelsius(this)
 
