@@ -145,6 +145,8 @@ class OfflineFirstFavoriteCitiesRepository(
             refreshGates.getOrPut(cityId) { RefreshGate() }.also { it.users += 1 }
         }
         return try {
+            // Mutex приостанавливает ожидающую корутину и сериализует запросы одного города.
+            // У других городов свои мьютексы. В finally счётчик обновляется даже при отмене.
             gate.mutex.withLock { block() }
         } finally {
             withContext(NonCancellable) {
@@ -227,6 +229,8 @@ private fun aggregateRefreshResults(results: List<RefreshResult>): RefreshResult
 private suspend fun <T> dataRequest(block: suspend () -> T): Result<T> = try {
     Result.success(block())
 } catch (cancellation: CancellationException) {
+    // CancellationException передаём вызывающей корутине, чтобы отмена сохранила
+    // свою семантику и не превратилась в ошибку сети или парсинга.
     throw cancellation
 } catch (throwable: Throwable) {
     Result.failure(throwable.toDataException())
